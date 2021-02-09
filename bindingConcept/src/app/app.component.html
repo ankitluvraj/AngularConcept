@@ -1,0 +1,50 @@
+<!-- Interpolation Binding -->
+<h1 style="color: red;">{{title}} Ankit</h1>
+<h2>Employee Name {{empfirstName+' '+emplastName}}</h2>
+
+
+<h3>sum of two number is {{a+b}}</h3>
+
+
+<!-- Property Binding -->
+<span [innerHTML]='empfirstName'></span>
+<h1 [innerHTML]='empfirstName'></h1>
+
+<img [src]="'https://angular.io/assets/images/logos/angular/angular.svg'" [height]="200">
+
+    <!-- Attribute Binding -->
+
+    <table [attr.border]="bdr" height="200" width="400">
+        <tr>
+            <td [attr.colspan]="cols">Student Detail</td>
+            
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>marks</td>
+        </tr>
+         <tr>
+            <td>1</td>
+            <td>ankit</td>
+            <td>90</td>
+         </tr>
+
+    </table>
+
+
+    <!-- Event Binding -->
+    <button style="color:red" (click)="showData()"> ClickMe</button>
+    <button style="color:red" (click)="alertmassage()"> ClickMe</button><br><br>
+
+
+
+    <!-- Two Way Data Binding -->
+<!-- without ng module -->
+Enter your Name<input [value]='data' (input)='data = $event.target.value'><br>
+Enter your Name:{{data}}
+
+<!-- With no-Module -->
+
+<input [(ngModel)]='data1'><br>
+entered value : {{data1}}

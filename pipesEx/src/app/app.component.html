@@ -1,0 +1,37 @@
+<!-- if you want to display promises then use async pipe 
+e.g after 5 sec display hello then use pormise -->
+<!-- Note:- if you want do display observable or promises data then go for 
+async pipe -->
+<h1>{{var_ten | async}}</h1>
+
+<h1>{{var_eight | currency:"GBP"}}</h1>
+<h1>{{var_eight | currency:"INR"}}</h1>
+<h1>{{var_eight | currency}}</h1>
+<!-- slice:2:4 means 2 represent included 4 represent index 4 excluded -->
+<h1>{{var_seven | slice:2:4}}</h1>
+<h1>{{var_seven | slice:1:3}}</h1>
+
+<h1>{{var_six | date:"fullDate"}}</h1>
+<h1>{{var_six | date:"medium"}}</h1>
+<h1>{{var_six | date:"short"}}</h1>
+<h1>{{var_six | date:"dd-MMM-yyyy"}}</h1>
+<h1>{{var_six | date:"dd-MM-yy"}}</h1>
+
+<!-- json pipe used to cnvert to json object to json string -->
+<h1>{{var_five | json}}</h1>
+
+<h1>{{var_four | number:"4.2-4"}}</h1>
+<h1>{{var_four | number:"3.1-3"}}</h1>
+
+<h1>{{var_three | titlecase}}</h1>
+<h1 style="color: red;">{{var_two | lowercase}}</h1>
+<h1>{{var_one | uppercase}}</h1>
+
+
+
+<h1>{{my_var | reverse}}</h1>
+
+<h1>{{msg3 | testpipe:msg2:msg1 }}</h1> 
+
+
+

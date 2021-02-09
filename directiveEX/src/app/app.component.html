@@ -1,0 +1,12 @@
+<div *ngIf="true">
+    Hello
+</div>
+
+<p *ngIf="true;then thenBlock;else elseBlock"></p>
+<ng-template #thenBlock>
+    Hello
+</ng-template>
+<ng-template #elseBlock>
+    Hi
+</ng-template>
+

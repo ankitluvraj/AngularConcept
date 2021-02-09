@@ -1,0 +1,68 @@
+
+<!-- if i want to show the spinner then on directive we need to place. -->
+<ng-http-loader></ng-http-loader>
+<!-- this products i need to convert string into json format.
+with the help of pipe json i need to convert string to json -->
+<!-- {{products | json}} -->
+
+
+<!-- Below we need to put normal data into material table data. -->
+<!-- below this class using this calss we need to implement shaddow effect -->
+ <div class="mat-elevation-z8"> <!-- here if you want to see elevation effect then we need to go for mar-elevation-z8 -->
+
+
+    <!-- <h3>Filter</h3> -->
+        <!-- <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field> -->
+
+ <!-- mat-table using this we need to convert normal table to material table -->
+    <table mat-table [dataSource]="dataSource" >
+<!-- mat-header-cell *matHeaderCellDef using this we need to convert normal header to material table header
+  so we need to apply searching or sorting kind of things. -->
+
+  <!-- mat-cell *matCellDef using this we need to display columns data. 
+and also matCellDef internally for loop kind to things so in row variable we need to store all the objects-->
+
+<!-- ng-container is used to used to create the container -->
+
+        <ng-container matColumnDef="_id" style="margin: 20px;">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+            <td mat-cell *matCellDef="let row">{{row._id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="p_id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>P_ID</th>
+            <td mat-cell *matCellDef="let row">{{row.p_id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="p_name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>P_NAME</th>
+            <td mat-cell *matCellDef="let row">{{row.p_name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="p_cost">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>P_COST</th>
+            <td mat-cell *matCellDef="let row">{{row.p_cost}}</td>
+        </ng-container>
+
+        <!-- <ng-container matColumnDef="countInStock">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Count</th>
+            <td mat-cell *matCellDef="let row">{{row.countInStock}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="numReviews">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Reviews</th>
+            <td mat-cell *matCellDef="let row">{{row.numReviews}}</td>
+        </ng-container> -->
+
+        <ng-container matColumnDef="images">
+            <th mat-header-cell *matHeaderCellDef>Image</th>
+            <td mat-cell *matCellDef="let row"><img width="100px" height="50px" src="{{row.images}}"></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+    </table>    
+</div>
+<!-- <mat-paginator [pageSizeOptions]="[1,2,3,5,7]" showFirstLastButtons></mat-paginator> -->
